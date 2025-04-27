@@ -5,6 +5,8 @@ from dotenv import load_dotenv
 import os
 
 load_dotenv()
+
+
 def setting():
     Settings.embed_model = HuggingFaceEmbedding(model_name="BAAI/bge-small-en-v1.5")
     Settings.llm = TogetherLLM(
@@ -12,4 +14,4 @@ def setting():
         api_key=os.getenv("TOGETHERAI_API_KEY")
     )
 
-print("Success")
+

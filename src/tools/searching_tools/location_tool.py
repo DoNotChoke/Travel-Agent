@@ -7,6 +7,7 @@ import asyncio
 
 base_url = "http://ip-api.com"
 
+
 async def get_location(ip_address: str) -> str:
     params = {}
     try:
@@ -34,6 +35,3 @@ location_tool = FunctionTool.from_defaults(
     description="Fetching API to get information about current location, including: Country, City"
                 "Latitude, Longitude, Timezone."
 )
-
-# s = asyncio.run(get_location("183.91.15.64"))
-# print(s)
